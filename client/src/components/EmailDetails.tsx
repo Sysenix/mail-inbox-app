@@ -6,7 +6,7 @@ interface Params {
 }
 
 const EmailDetails: React.FC = () => {
-  const { id } = useParams<Params>();
+  const { id } = useParams!<Params>();
 
   return (
     <div>
