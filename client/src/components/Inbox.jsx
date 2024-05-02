@@ -2,14 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-interface Email {
-  _id: string;
-  sender: string;
-  subject: string;
-}
 
 const Inbox = () => {
-  const [emails, setEmails] = useState<Email[]>([]);
+  const [emails, setEmails] = useState([]);
 
   useEffect(() => {
     const fetchEmails = async () => {

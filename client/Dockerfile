@@ -1,7 +1,8 @@
 FROM node:alpine AS frontend-build
 
 WORKDIR /app
-COPY client/package.json client/package-lock.json ./
+COPY package.json package-lock.json ./
 RUN npm install
-COPY client ./
+COPY . ./
 RUN npm run build
+CMD ["npm", "start"]

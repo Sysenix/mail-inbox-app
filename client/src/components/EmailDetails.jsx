@@ -1,12 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-interface Params {
-  id: string;
-}
-
-const EmailDetails: React.FC = () => {
-  const { id } = useParams!<Params>();
+const EmailDetails = () => {
+  const { id } = useParams();
 
   return (
     <div>

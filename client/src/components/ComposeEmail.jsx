@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-const ComposeEmail: React.FC = () => {
+const ComposeEmail = () => {
   const [recipient, setRecipient] = useState('');
   const [subject, setSubject] = useState('');
   const [body, setBody] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Logic to send email
     console.log('Sending email:', { recipient, subject, body });
